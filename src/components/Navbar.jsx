@@ -47,23 +47,25 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Nav */}
-      {isOpen && (
-        <div className="md:hidden bg-white shadow-md ">
-          <ul className="flex flex-col items-center space-y-4 py-4 ">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block text-gray-700 hover:text-indigo-600 font-medium transition-colors "
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+{isOpen && (
+  <div className="md:hidden bg-white shadow-lg rounded-b-xl border-t border-gray-200">
+    <ul className="flex flex-col items-center space-y-4 py-6 px-4">
+      {navItems.map((item) => (
+        <li key={item.href} className="w-full">
+          <a
+            href={item.href}
+            onClick={() => setIsOpen(false)}
+            className="block w-full text-center text-gray-700 hover:text-indigo-600 
+                       font-medium transition-colors duration-300 py-2 rounded-lg hover:bg-indigo-50"
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
     </nav>
   );
 }
