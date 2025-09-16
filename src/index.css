@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@keyframes borderGradient {
+  0% { border-color: #f472b6; }   
+  25% { border-color: #6366f1; } 
+  50% { border-color: #34d399; }  
+  75% { border-color: #facc15; }  
+  100% { border-color: #f472b6; } 
+}
+
+.animate-borderGradient {
+  animation: borderGradient 3s infinite linear;
+}
+
+
+@keyframes textColorChange {
+  0% { color: #6366f1; }   /* indigo */
+  25% { color: #f472b6; }  /* pink */
+  50% { color: #34d399; }  /* green */
+  75% { color: #facc15; }  /* yellow */
+  100% { color: #6366f1; } /* back to indigo */
+}
+
+.animate-textColorChange {
+  animation: textColorChange 3s infinite linear;
+}
