@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { IoCall } from "react-icons/io5";
+import { PiWhatsappLogoBold } from "react-icons/pi";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +22,9 @@ export default function Navbar() {
           <div className="text-2xl text-white  hover:text-indigo-600 transition-colors animate-textColorChange font-bold">
             Nirdeshak
           </div>
-          <p className="text-white hover:text-indigo-600">Mo.No:-9822766045</p>
+          <p className="flex items-center text-white hover:text-indigo-600">
+            <IoCall className="mr-2" /><PiWhatsappLogoBold className="mr-2"/> 9822766045
+          </p>{" "}
         </div>
         {/* <div className="text-2xl font-bold text-white  hover:text-indigo-600 transition-colors ">Nirdeshak</div> */}
 
@@ -47,25 +51,24 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Nav */}
-{isOpen && (
-  <div className="md:hidden bg-white shadow-lg rounded-b-xl border-t border-gray-200">
-    <ul className="flex flex-col items-center space-y-4 py-6 px-4">
-      {navItems.map((item) => (
-        <li key={item.href} className="w-full">
-          <a
-            href={item.href}
-            onClick={() => setIsOpen(false)}
-            className="block w-full text-center text-gray-700 hover:text-indigo-600 
+      {isOpen && (
+        <div className="md:hidden bg-white shadow-lg rounded-b-xl border-t border-gray-200">
+          <ul className="flex flex-col items-center space-y-4 py-6 px-4">
+            {navItems.map((item) => (
+              <li key={item.href} className="w-full">
+                <a
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block w-full text-center text-gray-700 hover:text-indigo-600 
                        font-medium transition-colors duration-300 py-2 rounded-lg hover:bg-indigo-50"
-          >
-            {item.label}
-          </a>
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
-
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }

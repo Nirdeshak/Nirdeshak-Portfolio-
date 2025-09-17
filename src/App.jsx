@@ -14,7 +14,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="font-sans scroll-smooth bg-gray-50">
+    <div className="font-sans scroll-smooth bg-gray-900">
       <Navbar />
 
       {/* Sections */}
