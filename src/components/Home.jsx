@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../assets/hero/hero.avif";
 import pdf from "../assets/pdf/Resume.pdf";
+import SplashCursor from "./SplashCursor";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       id="home"
       className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center bg-gray-900 px-4 sm:px-6 md:px-16 py-10"
     >
+      <SplashCursor />
       {/* Left Text Section */}
       <div
         className="flex-1 text-center md:text-left mt-8 md:mt-0"

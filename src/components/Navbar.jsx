@@ -23,7 +23,7 @@ export default function Navbar() {
             Nirdeshak
           </div>
           <p className="flex items-center text-white hover:text-indigo-600">
-            <IoCall className="mr-2" /><PiWhatsappLogoBold className="mr-2"/> 9822766045
+            <IoCall className="mr-2 text-green-700" /><PiWhatsappLogoBold className="mr-2 text-green-700"/> 9822766045
           </p>{" "}
         </div>
         {/* <div className="text-2xl font-bold text-white  hover:text-indigo-600 transition-colors ">Nirdeshak</div> */}
